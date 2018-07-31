@@ -1,4 +1,5 @@
 <?php $this->load->view('header_v'); ?>
+
 <div class='container'>
 	<div class='jumbotron jumbotron-fluid' id= jumbo>
 		<h1 class='display-4'><?php echo $cityname . " - " .$today . "<br>";?></h1>

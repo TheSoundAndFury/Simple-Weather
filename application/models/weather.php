@@ -7,6 +7,12 @@ class weather extends CI_Model {
 		log_message("INFO", __CLASS__ . "::" . __FUNCTION__);
 	}
 
+	/**
+	 * Get the weather data from the api
+	 * 
+	 * @return json
+	 * 
+	 */
 	public function getWeather() {
 
 		$data = $this->weather->getCity();
@@ -20,7 +26,13 @@ class weather extends CI_Model {
 
 			return $clima;
 		}
-
+	/**
+	 * 
+	 * We need to get the city where the user is using the app from.
+	 * 
+	 * @return json
+	 * 
+	 */
 	public function getCity() {
 
 			$geocode=file_get_contents('http://ip-api.com/json');

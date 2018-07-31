@@ -1,35 +1,37 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class SimpleWeather extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
+		/**
+		 * Load the URL helper 
+		 */
 		$this->load->helper('url');
-		//units=For temperature in Celsius use units=metric
-		//5128638 is new york ID
+		/**
+		 * Load the weather model so we can get our data. 
+		 */
 		$this->load->model('weather');
 
 		$clima = $this->weather->getWeather();
 
-		//$latLong = $this->weather->getLatLong();
-
 		//print("<pre>".print_r($clima,true)."</pre>");
+
+		//Build the data in the formats we want and return it to us. 
+		$data = $this->buildData($clima);
+		
+		//Throw it to the view for display. 
+		$this->load->view('weather_v',$data);		
+
+	}
+	/**
+	 * Organize and extract the data we need from the API call. 
+	 * 
+	 * @param  [json]
+	 * @return [array]
+	 */
+	private function buildData(array $clima) {
 
 		$data['temp_cur'] = $clima['list'][0]['main']['temp'];
 		$data['temp_max'] = $clima['list'][0]['main']['temp_max'];
@@ -40,8 +42,7 @@ class Welcome extends CI_Controller {
 		$data['icon'] = $clima['list'][0]['weather'][0]['icon'].".png";
 		$data['today'] = date("F j, Y, g:i a");
 		$data['cityname'] = $clima['list'][0]['name'];
-		
-		$this->load->view('weather_v',$data);		
 
+		return $data;
 	}
 }
