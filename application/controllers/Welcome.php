@@ -20,20 +20,26 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-
+		$this->load->helper('url');
 		//units=For temperature in Celsius use units=metric
 		//5128638 is new york ID
 		$this->load->model('weather');
 
 		$clima = $this->weather->getWeather();
 
+		//$latLong = $this->weather->getLatLong();
+
 		//print("<pre>".print_r($clima,true)."</pre>");
 
-		$data['temp_max'] = $clima->main->temp_max;
-		$data['temp_min'] = $clima->main->temp_min;
-		$data['icon'] = $clima->weather[0]->icon.".png";
+		$data['temp_cur'] = $clima['list'][0]['main']['temp'];
+		$data['temp_max'] = $clima['list'][0]['main']['temp_max'];
+		$data['temp_min'] = $clima['list'][0]['main']['temp_min'];
+		$data['humidity'] = $clima['list'][0]['main']['humidity'];
+ 		$data['description'] = $clima['list'][0]['weather'][0]['description'];
+ 		$data['cloudy'] = $clima['list'][0]['clouds']['all'];
+		$data['icon'] = $clima['list'][0]['weather'][0]['icon'].".png";
 		$data['today'] = date("F j, Y, g:i a");
-		$data['cityname'] = $clima->name;
+		$data['cityname'] = $clima['list'][0]['name'];
 		
 		$this->load->view('weather_v',$data);		
 
