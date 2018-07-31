@@ -9,7 +9,7 @@ It also uses http://ip-api.com/json to find the users location based on IP addre
 
 
 ![Screen shot]
-(https://imgur.com/ZFjNq48)
+(https://i.imgur.com/ZFjNq48.jpg)
 
 *******
 License
