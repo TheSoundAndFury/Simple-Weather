@@ -7,9 +7,7 @@ Simple Weather is just that, a simple weather app that uses https://openweatherm
 It also uses http://ip-api.com/json to find the users location based on IP address. 
 
 
-
-![Screen shot]
-(https://i.imgur.com/ZFjNq48.jpg)
+[Imgur](https://i.imgur.com/ZFjNq48.jpg)
 
 *******
 License
