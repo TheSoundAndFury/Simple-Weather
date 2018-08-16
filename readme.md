@@ -10,14 +10,14 @@ It also uses http://ip-api.com/json to find the users location based on IP addre
 ![weather](https://i.imgur.com/ZFjNq48.jpg)
 
 *******
-License
+# License
 *******
 
 Please see the `license
 agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
 *********
-Resources
+# Resources
 *********
 
 -  `Open Weather <https://openweathermap.org/api>`_
