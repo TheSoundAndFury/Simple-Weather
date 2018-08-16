@@ -7,10 +7,10 @@
 			<?php echo "Current Temp: " . round($temp_cur, 1) ."&deg;F<br>";?>
 		</div>
 		<div class='lead' id="max">
-			<?php echo "Temp Max: " . round($temp_max,1) ."&deg;F<br>";?>
+			<?php echo "High Today: " . round($temp_max,1) ."&deg;F<br>";?>
 		</div>
 		<div class='lead' id = "min">
-			<?php echo "Temp Min: " . round($temp_min,1) . "&deg;F<br>";?>
+			<?php echo "Low Today: " . round($temp_min,1) . "&deg;F<br>";?>
 		</div>
 		<div class='lead' id = "min">
 			<?php echo "Humidity: " . $humidity . "%<br>";?>
