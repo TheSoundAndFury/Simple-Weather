@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/37bc117b05a14b2abbff06a7790ca15e)](https://www.codacy.com/project/TheSoundAndFury/Simple-Weather/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TheSoundAndFury/Simple-Weather&amp;utm_campaign=Badge_Grade_Dashboard)
+
 ###################
 Simple Weather
 ###################
