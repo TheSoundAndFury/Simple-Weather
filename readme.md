@@ -20,7 +20,7 @@ agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/so
 # Resources
 *********
 
--  `Open Weather <https://openweathermap.org/api>`_
--  `IP-API <http://ip-api.com/json>`_
--  `Codeigniter Framework <https://codeigniter.com//>`_
+-  [Open Weather](https://openweathermap.org/api)
+-  [IP-API](http://ip-api.com/json)
+-  [Codeigniter Framework](https://codeigniter.com//)
 
